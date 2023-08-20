@@ -31,6 +31,11 @@ http://18.207.195.18/
 => Accessing Todo website using subdomain "todo-ec2" over Route 53
 http://ec2.bjss-aws.pt/
 
+# Amplify
+
+https://dev3596.d1x4tj7e235iad.amplifyapp.com/
+https://amplify.bjss-aws.pt
+
 # ECS - Elastic Container Service
 
 registry: public registry bjss-aws
