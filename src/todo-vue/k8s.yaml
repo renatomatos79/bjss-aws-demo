@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: central-login-api-depl
+  name: bjss-todo-mvc-depl
   labels:
-    app: central-login-api
+    app: bjss-todo-mvc
 spec:
   replicas: 1
   selector:
@@ -19,5 +19,3 @@ spec:
           image: public.ecr.aws/g8g7h5m7/bjss-aws:latest
           ports:
             - containerPort: 80
-      imagePullSecrets:
-        - name: docker-inforplus-secret
