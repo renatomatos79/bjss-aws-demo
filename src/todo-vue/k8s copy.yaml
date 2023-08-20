@@ -20,19 +20,18 @@ spec:
           ports:
             - containerPort: 80
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: v1
+kind: Service
 metadata:
-  name: ingress-wildcard-host
+  name: bjss-todo-mvc-nodeport
 spec:
-  rules:
-    - host: "k8s.bjss-aws.pt"
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: bjss-todo-mvc-service
-                port:
-                  number: 80
+  type: NodePort
+  selector:
+    app: bjss-todo-mvc
+  ports:
+    - protocol: TCP
+      port: 80
+      # para onde sera redirecionado o trafico
+      targetPort: 80
+      # porta para acesso ao servico
+      nodePort: 30001
