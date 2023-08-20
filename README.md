@@ -90,6 +90,21 @@ https://beanstalk.bjss-aws.pt
 
 # EKS (Elastic Kubernetes Service)
 
+https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks
+
+.: Install terraform
+
+- https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+
+.: Installing kubectl
+
+export K8S_RELEASE=1.27.0
+curl -LO https://dl.k8s.io/release/v$K8S_RELEASE/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --short
+
+.: Cluster Info
 The first step is adding a role for our cluster eksClusterRole
 
 - Open the IAM console at https://console.aws.amazon.com/iam/.
@@ -106,14 +121,7 @@ Cluster name: eks-bjss-demo
 zones: us-east-1a, us-east-1b
 target role: eksClusterRole
 kubernetes version: 1.27
-
-Installing kubectl
-
-export K8S_RELEASE=1.27.0
-curl -LO https://dl.k8s.io/release/v$K8S_RELEASE/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-kubectl version --short
+node group: eks-bjss-demo-node-group
 
 Connecting to the Cluster
 

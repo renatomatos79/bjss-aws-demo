@@ -7,15 +7,17 @@ provider "aws" {
 
 # Filter out local zones, which are not currently supported 
 # with managed node groups
+/*
 data "aws_availability_zones" "available" {
   filter {
     name   = "opt-in-status"
     values = ["opt-in-not-required"]
   }
 }
+*/
 
 locals {
-  cluster_name = "eks-bjss-demo-${random_string.suffix.result}"
+  cluster_name = "eks-bjss-demo"
 }
 
 resource "random_string" "suffix" {
@@ -30,7 +32,7 @@ module "vpc" {
   name = "eks-bjss-demo-vpc"
 
   cidr = "10.0.0.0/16"
-  azs  = slice(data.aws_availability_zones.available.names, 0, 3)
+  # azs  = slice(data.aws_availability_zones.available.names, 0, 3)
 
   private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
   public_subnets  = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
