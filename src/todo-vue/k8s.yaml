@@ -1,24 +1,29 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: bjss-todo-mvc-depl
+  name: bjss-todo-mvc-pod
   labels:
-    app: bjss-todo-mvc
+    app.kubernetes.io/name: bjss-todo-mvc-pod
 spec:
-  replicas: 1
+  containers:
+    - name: bjss-todo-mvc-pod
+      image: public.ecr.aws/g8g7h5m7/bjss-aws:latest
+      ports:
+        - containerPort: 80
+          name: http-web-svc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bjss-todo-mvc-service
+spec:
   selector:
-    matchLabels:
-      app: bjss-todo-mvc
-  template:
-    metadata:
-      labels:
-        app: bjss-todo-mvc
-    spec:
-      containers:
-        - name: bjss-todo-mvc
-          image: public.ecr.aws/g8g7h5m7/bjss-aws:latest
-          ports:
-            - containerPort: 80
+    app.kubernetes.io/name: bjss-todo-mvc-pod
+  ports:
+    - name: name-of-service-port
+      protocol: TCP
+      port: 80
+      targetPort: http-web-svc
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -33,6 +38,6 @@ spec:
             path: "/"
             backend:
               service:
-                name: bjss-todo-mvc
+                name: bjss-todo-mvc-service
                 port:
                   number: 80
