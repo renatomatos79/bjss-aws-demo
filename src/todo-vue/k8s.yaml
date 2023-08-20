@@ -26,10 +26,18 @@ spec:
       targetPort: http-web-svc
 ---
 apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: istio
+spec:
+  controller: istio.io/ingress-controller
+---
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-wildcard-host
 spec:
+  ingressClassName: istio
   rules:
     - host: "k8s.bjss-aws.pt"
       http:
