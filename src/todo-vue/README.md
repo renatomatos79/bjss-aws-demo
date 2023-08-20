@@ -1,4 +1,4 @@
-## Getting Started
+## Getting Started.
 
 To get up and running, follow these steps:
 
