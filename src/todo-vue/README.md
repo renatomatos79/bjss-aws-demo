@@ -47,11 +47,15 @@ docker run -d --name todoapp-1.0.1 -p 8081:80 renatomatos79/bjss:todo-1.0.1
 
 ### Tagging and publishing to aws
 
-```bash
-docker image build -t todo:1.0.1 .
-docker tag todo:1.0.1 public.ecr.aws/g8g7h5m7/bjss-aws:latest
+Don't forget to access your EC2 instance and run the command below to connect to the Container Registry
 
+```bash
 aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/g8g7h5m7
 
+npm i
+npm run build
+docker image build -t bjss-aws:latest .
+docker tag bjss-aws:latest public.ecr.aws/g8g7h5m7/bjss-aws:latest
 docker push public.ecr.aws/g8g7h5m7/bjss-aws:latest
+docker run -d --name todoapp-latest -p 80:80 public.ecr.aws/g8g7h5m7/bjss-aws:latest
 ```
