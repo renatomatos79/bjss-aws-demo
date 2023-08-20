@@ -32,7 +32,7 @@ Select the task, and then inspect the public IP in order to access the URL for y
 # AWS EC2 access
 
 => Accessing EC2
-ssh -i "C:\Users\renato.matos\.ssh\bjss-aws.pem" ubuntu@ec2-3-91-155-96.compute-1.amazonaws.com
+ssh -i "C:\Users\renato.matos\.ssh\bjss-aws.pem" ubuntu@ec2-3-85-231-1.compute-1.amazonaws.com
 
 => Setup docker
 sudo apt -y update
@@ -87,6 +87,37 @@ http://bjss-aws-ebt.us-east-1.elasticbeanstalk.com/
 Go to the Route 53 and add an alias for your beanstalk app (bjss-aws-ebt.us-east-1.elasticbeanstalk)
 
 https://beanstalk.bjss-aws.pt
+
+# EKS (Elastic Kubernetes Service)
+
+The first step is adding a role for our cluster eksClusterRole
+
+- Open the IAM console at https://console.aws.amazon.com/iam/.
+- Choose Roles, then Create role.
+- Under Trusted entity type, select AWS service.
+- From the Use cases for other AWS services dropdown list, choose EKS.
+- Choose EKS - Cluster for your use case, and then choose Next.
+- On the Add permissions tab, choose Next.
+- For Role name, enter a unique name for your role, such as eksClusterRole.
+- For Description, enter descriptive text such as Amazon EKS - Cluster role.
+- Choose Create role.
+
+Cluster name: eks-bjss-demo
+zones: us-east-1a, us-east-1b
+target role: eksClusterRole
+kubernetes version: 1.27
+
+Installing kubectl
+
+export K8S_RELEASE=1.27.0
+curl -LO https://dl.k8s.io/release/v$K8S_RELEASE/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --short
+
+Connecting to the Cluster
+
+aws eks --region us-east-1 update-kubeconfig --name eks-bjss-demo
 
 # Docker Playground
 

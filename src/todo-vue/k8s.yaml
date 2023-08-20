@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: central-login-api-depl
+  labels:
+    app: central-login-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bjss-todo-mvc
+  template:
+    metadata:
+      labels:
+        app: bjss-todo-mvc
+    spec:
+      containers:
+        - name: bjss-todo-mvc
+          image: public.ecr.aws/g8g7h5m7/bjss-aws:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: docker-inforplus-secret
