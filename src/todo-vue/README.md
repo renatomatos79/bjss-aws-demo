@@ -24,7 +24,7 @@ npm run build
 npm run lint
 ```
 
-### Building and running our docker image
+### Building and running our docker image..
 
 ```bash
 docker image build -t todo:1.0.1 .
