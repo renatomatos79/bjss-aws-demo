@@ -77,6 +77,9 @@ module "eks" {
       desired_size = 2
     }
 
+/* 
+    for now, one cluster is enough
+    
     two = {
       name = "node-group-2"
 
@@ -86,6 +89,7 @@ module "eks" {
       max_size     = 2
       desired_size = 1
     }
+*/    
   }
 }
 
