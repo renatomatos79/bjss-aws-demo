@@ -28,7 +28,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
-  name: istio
+  name: nginx
 spec:
   controller: istio.io/ingress-controller
 ---
@@ -37,7 +37,7 @@ kind: Ingress
 metadata:
   name: ingress-wildcard-host
 spec:
-  ingressClassName: istio
+  ingressClassName: nginx
   rules:
     - host: "k8s.bjss-aws.pt"
       http:
