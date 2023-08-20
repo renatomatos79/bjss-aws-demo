@@ -33,6 +33,6 @@ spec:
             path: "/"
             backend:
               service:
-                name: bjss-todo-mvc-service
+                name: bjss-todo-mvc-depl
                 port:
                   number: 80
