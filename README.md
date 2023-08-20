@@ -1,12 +1,8 @@
-# bjss-aws-demo
+# bjss-aws-demo.
 
 # S3 Bucket without CDF
 
 http://bjss-aws-no-cdf.s3-website-us-east-1.amazonaws.com/
-
-# S3 Bucket with CDF
-
-http://d3jrep1z9u05ci.cloudfront.net/index.html
 
 # S3 Bucket with CDF and Domain name
 
@@ -27,13 +23,13 @@ docker run hello-world
 docker run -d --name todoapp-1.0.1 -p 80:80 renatomatos79/bjss:todo-1.0.1
 
 => Accessing EC2
-ssh -i "C:\Users\renato.matos\.ssh\bjss-aws.pem" ubuntu@ec2-18-207-195-18.compute-1.amazonaws.com
+ssh -i "C:\Users\renato.matos\.ssh\bjss-aws.pem" ubuntu@ec2-3-82-136-140.compute-1.amazonaws.com
 
 => Accessing Todo website
 http://18.207.195.18/
 
 => Accessing Todo website using subdomain "todo-ec2" over Route 53
-http://todo-ec2.bjss-aws.pt/
+http://ec2.bjss-aws.pt/
 
 # ECS - Elastic Container Service
 
