@@ -32,7 +32,7 @@ Select the task, and then inspect the public IP in order to access the URL for y
 # AWS EC2 access
 
 => Accessing EC2
-ssh -i "C:\Users\renato.matos\.ssh\bjss-aws.pem" ubuntu@ec2-3-85-231-1.compute-1.amazonaws.com
+ssh -i "C:\Users\renato.matos\.ssh\bjss-aws.pem" ubuntu@ec2-54-165-153-207.compute-1.amazonaws.com
 
 => Setup docker
 sudo apt -y update
