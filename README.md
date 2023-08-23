@@ -6,7 +6,7 @@ This repository was built to support the meetup "AWS Hosting Strategy" on AWS Us
 
 ## Source code
 
-The Vue.js source code used in this project can be found here https://github.com/renatomatos79/bjss-aws-demo/tree/main/src/todo-vue
+The Vue.js source code used in this project can be found [here](https://github.com/renatomatos79/bjss-aws-demo/tree/main/src/todo-vue) 
 
 ## Creating a free domain and using AWS Route 53 Hosted Zone
 
@@ -16,7 +16,7 @@ In this section we are gonna learn how to:
 - Move it to AWS DNS Zone
 - Build a free SSL certificate
 
-https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/0.route%2053
+[Link do the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/0.route%2053)
 
 ## Hosting a Vue.js projet using: 
 
