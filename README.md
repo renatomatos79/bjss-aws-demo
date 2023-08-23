@@ -51,3 +51,31 @@ This is very detailed section that contains four nice videos showing us:
 
 [Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/4.ec2)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/4.ec2
 
+### Elastic Beanstalk
+
+This section contains two videos showing us how to use Elastic Beanstalk to host our Vue.js docker project in a very simple way.
+
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/5.beanstalk)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/5.beanstalk
+
+### ECS (Amazon Elastic Container Service)
+
+Amazon Elastic Container Service is a feature that runs highly secure, reliable, and scalable containers.
+In this section using three very detailed videos we are gonna learn how to:
+- Create and send our Vue.js docker image to Amazon Elastic Container Registry
+- Create an ECS Cluster
+- Define a task definition for our image
+- Create a service and scale it to run our task definition
+
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/6.ecs)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/6.ecs
+
+### EKS (Amazon Elastic Kubernetes Service)
+
+Amazon Elastic Kubernetes Service is the most trusted way to start, run, and scale Kubernetes services.
+This section contains four great videos showing us how to:
+- Connect to our EC2 instance and install awscli, kubectl, terraform
+- Provision our EKS Cluster using terraform
+- Connect to the EKS Cluster
+- Deploy our Vue.js docker container to EKS Cluster
+- Resolve the grant access issue in order to allow our AWS Account to inspect the EKS Cluster
+
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/7.eks)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/7.eks  
