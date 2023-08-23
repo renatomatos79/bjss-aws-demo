@@ -107,7 +107,7 @@ kubectl apply -f k8s.yaml
 # Giving admin access to the cluster
 
 ```bash
-cd ~/bjss-aws-demo/eks/roles
+cd ~/bjss-aws-demo/services/7.eks/roles
 kubectl apply -f eks-map-admin-user.yaml
 ```
 
