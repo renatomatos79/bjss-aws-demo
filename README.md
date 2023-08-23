@@ -30,13 +30,13 @@ This section we have three short animations showing us how to deploy our Vue.js 
 
 This section contains one animation showing us how to use Cloudfront to deploy our Vue.js application using a S3 Bucket using a custom subdomain 
 
-[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/2.cloudfront)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/2.cloudfront 
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/2.cloudfront)
 
 ### Amplify
 
 This section contains three nice animations helping us to easy deploy our Vue.js project
 
-[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/3.amplify)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/3.amplify
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/3.amplify)
 
 ### EC2
 
@@ -49,13 +49,13 @@ This is very detailed section that contains four nice videos showing us:
 - Run our docker image
 - Access our Vue.js project using a public IP
 
-[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/4.ec2)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/4.ec2
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/4.ec2)
 
 ### Elastic Beanstalk
 
 This section contains two videos showing us how to use Elastic Beanstalk to host our Vue.js docker project in a very simple way.
 
-[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/5.beanstalk)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/5.beanstalk
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/5.beanstalk)
 
 ### ECS (Amazon Elastic Container Service)
 
@@ -66,7 +66,7 @@ In this section using three very detailed videos we are gonna learn how to:
 - Define a task definition for our image
 - Create a service and scale it to run our task definition
 
-[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/6.ecs)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/6.ecs
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/6.ecs)
 
 ### EKS (Amazon Elastic Kubernetes Service)
 
@@ -78,4 +78,4 @@ This section contains four great videos showing us how to:
 - Deploy our Vue.js docker container to EKS Cluster
 - Resolve the grant access issue in order to allow our AWS Account to inspect the EKS Cluster
 
-[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/7.eks)https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/7.eks  
+[Link to the folder](https://github.com/renatomatos79/bjss-aws-demo/tree/main/services/7.eks) 
