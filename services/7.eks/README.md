@@ -63,6 +63,7 @@ sudo apt update
 
 ```bash
 sudo apt-get install terraform
+terraform --version
 
 ```
 
@@ -74,7 +75,7 @@ sudo apt-get install terraform
 aws configure
 AWS Access Key ID [****************2DW5]: type your access key
 AWS Secret Access Key [****************rRF4]: type your secret
-Default region name [us-east-1]:
+Default region name [us-east-1]: us-east-1
 Default output format [None]:
 
 ```
@@ -83,8 +84,9 @@ Default output format [None]:
 
 ```bash
 Git clone git@github.com:renatomatos79/bjss-aws-demo.git
-cd bjss-aws-demo.git\eks\terraform
-
+cd bjss-aws-demo/services/7.eks/terraform
+terraform init
+terraform apply
 ```
 
 # Connecting to the cluster
@@ -98,14 +100,14 @@ kubectl get nodes
 # Deploying the todo-mvc application
 
 ```bash
-cd bjss-aws-demo.git\src\todo-mvc
-kubectl apply -f eks.yaml
+cd ~/bjss-aws-demo/src/todo-vue
+kubectl apply -f k8s.yaml
 ```
 
 # Giving admin access to the cluster
 
 ```bash
-cd bjss-aws-demo.git\eks\roles
+cd ~/bjss-aws-demo/eks/roles
 kubectl apply -f eks-map-admin-user.yaml
 ```
 
