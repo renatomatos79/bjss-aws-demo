@@ -6,6 +6,9 @@ ecs-bjss-aws-task-definition
 ecs-bjss-aws-task
 ecs-bjss-aws-service
 
+image name: bjss-aws:latest
+image url: public.ecr.aws/g8g7h5m7/bjss-aws:latest
+
 Attention!
 To stop a task, just click on the service, identify the task and click on stop
 But don't forget to update the service and set the "Desired tasks" field to be zero, otherwise, another task will be auto recreated
